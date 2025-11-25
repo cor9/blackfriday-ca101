@@ -28,9 +28,10 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
         "Helvetica Neue", Arial, sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0, #020617 52%, #020617 100%);
+      background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
       color: #f9fafb;
       line-height: 1.5;
+      min-height: 100vh;
     }
 
     a {
@@ -41,27 +42,29 @@
     .page {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 32px 18px 60px;
+      padding: 48px 18px 80px;
     }
 
     header {
-      margin-bottom: 32px;
+      margin-bottom: 56px;
       text-align: center;
+      padding: 0 12px;
     }
 
     .tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 12px;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      padding: 6px 12px;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      padding: 8px 16px;
       border-radius: 999px;
-      background: rgba(248, 250, 252, 0.08);
-      border: 1px solid rgba(248, 250, 252, 0.16);
-      color: #e5e7eb;
-      margin-bottom: 12px;
+      background: rgba(249, 115, 22, 0.1);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      color: var(--accent-soft);
+      margin-bottom: 24px;
     }
 
     .tag-dot {
@@ -73,17 +76,23 @@
     }
 
     h1 {
-      font-size: clamp(2.3rem, 4vw, 3rem);
-      font-weight: 750;
-      letter-spacing: -0.04em;
-      margin-bottom: 8px;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .subhead {
-      font-size: 0.98rem;
-      max-width: 640px;
+      font-size: 1.1rem;
+      max-width: 680px;
       margin: 0 auto;
-      color: #e5e7eb;
+      color: #cbd5e1;
+      line-height: 1.6;
     }
 
     .highlight {
@@ -94,24 +103,24 @@
     .top-cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
       justify-content: center;
-      margin-top: 20px;
-      margin-bottom: 12px;
+      margin-top: 32px;
+      margin-bottom: 0;
     }
 
     .btn-primary,
     .btn-ghost {
       border-radius: 999px;
-      padding: 10px 18px;
-      font-size: 0.9rem;
+      padding: 14px 28px;
+      font-size: 1rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       border: 1px solid transparent;
       cursor: pointer;
-      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+      transition: all 0.2s ease;
       text-decoration: none;
       white-space: nowrap;
     }
@@ -119,29 +128,33 @@
     .btn-primary {
       background: var(--accent);
       color: #111827;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 10px 40px rgba(249, 115, 22, 0.3);
     }
 
     .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 50px rgba(249, 115, 22, 0.4);
+      background: #fb923c;
     }
 
     .btn-ghost {
-      background: transparent;
-      border-color: rgba(248, 250, 252, 0.18);
+      background: rgba(15, 23, 42, 0.5);
+      border-color: rgba(248, 250, 252, 0.2);
       color: #e5e7eb;
+      backdrop-filter: blur(10px);
     }
 
     .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.88);
+      background: rgba(15, 23, 42, 0.8);
+      border-color: rgba(248, 250, 252, 0.3);
+      transform: translateY(-2px);
     }
 
     .urgency {
-      font-size: 0.8rem;
-      color: #e5e7eb;
-      opacity: 0.9;
-      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-top: 16px;
+      font-style: italic;
     }
 
     .layout {
@@ -450,11 +463,10 @@
         <span class="tag-dot"></span>
         Black Friday • Child Actor 101
       </div>
-      <h1>High-value. Low friction. Impossible to ignore.</h1>
+      <h1>Every audition is a chance.<br>Let's make sure your child is ready.</h1>
       <p class="subhead">
-        For a short Black Friday window, Child Actor 101 parents get insider-level coaching, talent assessment,
-        and Prep101 support at the lowest prices I’ll offer all year.
-        <span class="highlight">Built for serious young actors and the parents steering the ship.</span>
+        Real coaching. Clear direction. Honest guidance for parents who refuse to wing it.
+        This Black Friday, get the tools and training that turn nervous kids into confident performers—at prices that won't return until next year.
       </p>
       <div class="top-cta-row">
         <a href="#offers" class="btn-primary">
@@ -465,7 +477,7 @@
         </a>
       </div>
       <p class="urgency">
-        Good for a limited Black Friday window only. Once it closes, these offers go back in the vault.
+        Limited-time Black Friday pricing. When the sale ends, these rates disappear until next year.
       </p>
     </header>
 
