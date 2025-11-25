@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Black Friday – Child Actor 101</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Child Actor 101 Black Friday Deals: coaching, talent assessments, Prep101 packs, and bundles for serious young actors and their parents." />
+  <style>
+    :root {
+      --navy: #0f172a;
+      --ink: #111827;
+      --cream: #fef9e7;
+      --accent: #f97316;
+      --accent-soft: #fed7aa;
+      --card-bg: #ffffff;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --radius-lg: 16px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 52%, #020617 100%);
+      color: #f9fafb;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 18px 60px;
+    }
+
+    header {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.08);
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      color: #e5e7eb;
+      margin-bottom: 12px;
+    }
+
+    .tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.45);
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .subhead {
+      font-size: 0.98rem;
+      max-width: 640px;
+      margin: 0 auto;
+      color: #e5e7eb;
+    }
+
+    .highlight {
+      color: var(--accent-soft);
+      font-weight: 600;
+    }
+
+    .top-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111827;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(248, 250, 252, 0.18);
+      color: #e5e7eb;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.88);
+    }
+
+    .urgency {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      opacity: 0.9;
+      margin-top: 6px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
+      gap: 22px;
+      margin-top: 32px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .main-card {
+      background: radial-gradient(circle at top left, #f97316 0, #f97316 12px, #020617 12px);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(248, 250, 252, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .main-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.85),
+          rgba(15, 23, 42, 0.92)
+        );
+      pointer-events: none;
+    }
+
+    .main-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .main-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .main-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .main-card-price {
+      text-align: right;
+      font-size: 0.95rem;
+    }
+
+    .price-now {
+      font-weight: 750;
+      color: var(--accent-soft);
+    }
+
+    .price-reg {
+      font-size: 0.78rem;
+      color: #e5e7eb;
+      opacity: 0.8;
+    }
+
+    .bullet-list {
+      list-style: none;
+      margin-top: 8px;
+      margin-bottom: 10px;
+      padding-left: 0;
+    }
+
+    .bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.86rem;
+      color: #e5e7eb;
+      margin-bottom: 4px;
+    }
+
+    .bullet-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .why {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      opacity: 0.9;
+      margin-top: 2px;
+    }
+
+    .card-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-soft);
+      opacity: 0.9;
+    }
+
+    .btn-main-card {
+      padding: 7px 14px;
+      font-size: 0.85rem;
+    }
+
+    .grid-offers {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .offer-card {
+      background: rgba(15, 23, 42, 0.88);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      padding: 14px 14px 12px;
+    }
+
+    .offer-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .offer-title {
+      font-size: 0.95rem;
+      font-weight: 650;
+    }
+
+    .offer-price {
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    .offer-price span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .offer-body {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      margin-top: 6px;
+    }
+
+    .offer-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 6px;
+    }
+
+    .offer-list li {
+      font-size: 0.78rem;
+      margin-bottom: 3px;
+      color: #e5e7eb;
+    }
+
+    .offer-cta-row {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .offer-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .btn-offer {
+      padding: 6px 11px;
+      font-size: 0.78rem;
+    }
+
+    .sidebar {
+      background: #020617;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 16px 14px 14px;
+    }
+
+    .sidebar h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .sidebar p {
+      font-size: 0.83rem;
+      color: #e5e7eb;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-hr {
+      border: none;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      margin: 10px 0;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-list li {
+      margin-bottom: 4px;
+    }
+
+    .sidebar-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .footer {
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #e5e7eb;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .section-heading {
+      font-size: 1rem;
+      font-weight: 650;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="tag">
+        <span class="tag-dot"></span>
+        Black Friday • Child Actor 101
+      </div>
+      <h1>High-value. Low friction. Impossible to ignore.</h1>
+      <p class="subhead">
+        For a short Black Friday window, Child Actor 101 parents get insider-level coaching, talent assessment,
+        and Prep101 support at the lowest prices I’ll offer all year.
+        <span class="highlight">Built for serious young actors and the parents steering the ship.</span>
+      </p>
+      <div class="top-cta-row">
+        <a href="#offers" class="btn-primary">
+          View All Deals
+        </a>
+        <a href="#bundles" class="btn-ghost">
+          Start with Bundles
+        </a>
+      </div>
+      <p class="urgency">
+        Good for a limited Black Friday window only. Once it closes, these offers go back in the vault.
+      </p>
+    </header>
+
+    <main id="offers" class="layout">
+      <!-- LEFT: MAIN BUNDLE + GRID -->
+      <section>
+        <!-- HERO OFFER: AUDITION BOOST BUNDLE -->
+        <article class="main-card" id="boost">
+          <div class="main-card-inner">
+            <div class="main-card-header">
+              <div>
+                <div class="pill">Featured Black Friday Offer</div>
+                <div class="main-card-title">Audition Boost Bundle</div>
+              </div>
+              <div class="main-card-price">
+                <div class="price-now">$49</div>
+                <div class="price-reg">Reg. $159</div>
+              </div>
+            </div>
+            <ul class="bullet-list">
+              <li><span class="bullet-dot"></span><span>25-minute private audition coaching session.</span></li>
+              <li><span class="bullet-dot"></span><span>10-minute live Parent Strategy Consult.</span></li>
+              <li><span class="bullet-dot"></span><span>1 fully customized Prep101 audition guide credit.</span></li>
+              <li><span class="bullet-dot"></span><span>Self-Tape Framing + Background Cheat Sheet (PDF).</span></li>
+              <li><span class="bullet-dot"></span><span>“Be a Better Self-Tape Reader” mini-guide for parents.</span></li>
+            </ul>
+            <p class="why">
+              Immediate clarity. Real deliverables. A low-stress, high-impact way to sharpen your child’s next audition.
+            </p>
+            <div class="card-footer-row">
+              <span class="pill">Perfect for: quick wins + first-time families</span>
+              <a href="#" class="btn-primary btn-main-card">
+                Grab the Bundle
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- OTHER OFFERS GRID -->
+        <section id="bundles">
+          <div style="margin-top: 26px;">
+            <div class="section-label">Bundles & Sessions</div>
+            <div class="section-heading">Pick the path that fits your kid right now.</div>
+          </div>
+
+          <div class="grid-offers">
+            <!-- One Scene Special -->
+            <article class="offer-card" id="onescene">
+              <div class="offer-title-row">
+                <div class="offer-title">One Scene Special — Holiday Edition</div>
+                <div class="offer-price">
+                  $99
+                  <span>Reg. $189</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                Your best-selling One Scene Program, wrapped in a holiday bow.
+              </div>
+              <ul class="offer-list">
+                <li>Custom 1-scene script tailored to your child’s type.</li>
+                <li>Emotional beats + direction notes rehearsal guide.</li>
+                <li>20-minute intro meeting on Zoom.</li>
+                <li>Written notes on first self-tape draft.</li>
+                <li>40-minute fine-tune + self-tape recording session with Corey as reader.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Limited spots available</span>
+                <a href="#" class="btn-primary btn-offer">Reserve Your Spot</a>
+              </div>
+            </article>
+
+            <!-- Talent Assessment + Roadmap -->
+            <article class="offer-card" id="assessment">
+              <div class="offer-title-row">
+                <div class="offer-title">Talent Assessment + Roadmap</div>
+                <div class="offer-price">
+                  $59
+                  <span>Reg. $175</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                A structured, easy-to-digest evaluation for new or unsure families.
+              </div>
+              <ul class="offer-list">
+                <li>Video submission review.</li>
+                <li>Strengths & growth areas clearly outlined.</li>
+                <li>Typecasting notes & recommended training.</li>
+                <li>Casting profile review + actor package suggestions.</li>
+                <li>Agency submission readiness score.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Clarity for parents</span>
+                <a href="#" class="btn-primary btn-offer">Start Assessment</a>
+              </div>
+            </article>
+
+            <!-- Prep101 Packs -->
+            <article class="offer-card" id="prep101">
+              <div class="offer-title-row">
+                <div class="offer-title">Prep101 Stocking Stuffer Packs</div>
+                <div class="offer-price">
+                  from $20
+                  <span>Reg. up to $225</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                Giftable, stackable audition prep credit packs for December and beyond.
+              </div>
+              <ul class="offer-list">
+                <li>Pack A — 3 guides for $20 (Reg. $45)</li>
+                <li>Pack B — 7 guides for $45 (Reg. $105)</li>
+                <li>Pack C — 15 guides for $100 (Reg. $225)</li>
+                <li>Perfect for pre–pilot season warmups.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Stocking stuffers for serious kids</span>
+                <a href="#" class="btn-primary btn-offer">Choose Your Pack</a>
+              </div>
+            </article>
+
+            <!-- Parent Clarity Call -->
+            <article class="offer-card" id="clarity">
+              <div class="offer-title-row">
+                <div class="offer-title">The Parent Clarity Call</div>
+                <div class="offer-price">
+                  $39
+                  <span>Reg. $75</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                A 25-minute urgent Q&amp;A for parents who need answers now.
+              </div>
+              <ul class="offer-list">
+                <li>Sudden audition? Let’s triage.</li>
+                <li>Got an agent meeting? We’ll prep strategy.</li>
+                <li>Too many conflicting opinions? We’ll cut through the noise.</li>
+                <li>Leave with next steps, not more confusion.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Emergency pricing</span>
+                <a href="#" class="btn-primary btn-offer">Book a Call</a>
+              </div>
+            </article>
+
+            <!-- I Want It All Bundle -->
+            <article class="offer-card" id="all">
+              <div class="offer-title-row">
+                <div class="offer-title">The “I Want It All” Bundle</div>
+                <div class="offer-price">
+                  $189
+                  <span>Reg. $424</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                For parents who want to hit 2026 with intention and a full toolkit.
+              </div>
+              <ul class="offer-list">
+                <li>One Scene Program.</li>
+                <li>1 Prep101 guide credit.</li>
+                <li>20-minute consult.</li>
+                <li>Self-tape feedback.</li>
+                <li>Materials & casting profile review.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">All-in parents</span>
+                <a href="#" class="btn-primary btn-offer">Get the Bundle</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- CORE COACHING SECTION -->
+          <div style="margin-top: 26px;">
+            <div class="section-label">Core coaching • limited discounts</div>
+            <div class="section-heading">Reintroduced coaching offers, rarely discounted.</div>
+          </div>
+
+          <div class="grid-offers">
+            <!-- Strategy Session -->
+            <article class="offer-card" id="strategy">
+              <div class="offer-title-row">
+                <div class="offer-title">The Strategy Session</div>
+                <div class="offer-price">
+                  $59 / $85
+                  <span>30 min / 60 min</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                Targeted, results-driven coaching for auditions or specific challenges.
+              </div>
+              <ul class="offer-list">
+                <li>Prep101 delivered in advance so live time focuses on performance and booking strategy.</li>
+                <li>Fast turnaround. Audition-focused. No fluff.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Reintroduced</span>
+                <a href="#" class="btn-primary btn-offer">Book a Session</a>
+              </div>
+            </article>
+
+            <!-- Breakthrough Pack -->
+            <article class="offer-card" id="breakthrough">
+              <div class="offer-title-row">
+                <div class="offer-title">The Breakthrough Pack</div>
+                <div class="offer-price">
+                  $475
+                  <span>7 sessions</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                Launchpad for new families to build confidence and momentum quickly.
+              </div>
+              <ul class="offer-list">
+                <li>7 structured sessions.</li>
+                <li>Prep101 ahead of time so sessions go deeper, faster.</li>
+                <li>Ideal for habit-breaking and building audition-ready confidence.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Momentum builders</span>
+                <a href="#" class="btn-primary btn-offer">Start Your Breakthrough</a>
+              </div>
+            </article>
+
+            <!-- Pro Track -->
+            <article class="offer-card" id="protrack">
+              <div class="offer-title-row">
+                <div class="offer-title">The Pro Track</div>
+                <div class="offer-price">
+                  $300 / $165
+                  <span>Weekly / Bi-weekly</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                Exclusive, disciplined training for serious youth actors.
+              </div>
+              <ul class="offer-list">
+                <li>Weekly or bi-weekly coaching for consistency and accountability.</li>
+                <li>On audition weeks, Prep101 is included in advance.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Serious actors only</span>
+                <a href="#" class="btn-primary btn-offer">Join the Pro Track</a>
+              </div>
+            </article>
+
+            <!-- Audition Advantage Plan -->
+            <article class="offer-card" id="advantage">
+              <div class="offer-title-row">
+                <div class="offer-title">The Audition Advantage Plan</div>
+                <div class="offer-price">
+                  $199/mo
+                  <span>Value $258</span>
+                </div>
+              </div>
+              <div class="offer-body">
+                For families who want ongoing tape support without scrambling every time.
+              </div>
+              <ul class="offer-list">
+                <li>2 self-tape coaching sessions per month (Corey as coach + reader).</li>
+                <li>2 tape feedbacks.</li>
+                <li>Prep101 delivered before every session so your child arrives rehearsed.</li>
+              </ul>
+              <div class="offer-cta-row">
+                <span class="offer-tag">Coach + reader + plan</span>
+                <a href="#" class="btn-primary btn-offer">Join the Plan</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- RIGHT: SIDEBAR -->
+      <aside class="sidebar">
+        <h2>How to Choose the Right Offer</h2>
+        <p>
+          Not sure where to start? Use this mini cheat sheet:
+        </p>
+
+        <hr class="sidebar-hr" />
+
+        <div class="sidebar-label">Best if you're brand new</div>
+        <ul class="sidebar-list">
+          <li><strong>Talent Assessment + Roadmap</strong> – for clarity, direction, and a realistic plan.</li>
+          <li><strong>Parent Clarity Call</strong> – when you need answers on agents, timing, or next steps.</li>
+        </ul>
+
+        <div class="sidebar-label">Best if your child already tapes</div>
+        <ul class="sidebar-list">
+          <li><strong>Audition Boost Bundle</strong> – fast upgrade to the next audition.</li>
+          <li><strong>Prep101 Packs</strong> – ideal for families who know auditions are coming.</li>
+        </ul>
+
+        <div class="sidebar-label">Best for serious, long-term training</div>
+        <ul class="sidebar-list">
+          <li><strong>Breakthrough Pack</strong> – short-term sprint for skill building.</li>
+          <li><strong>Pro Track</strong> – ongoing discipline and accountability.</li>
+          <li><strong>Audition Advantage Plan</strong> – continuous tape support all month.</li>
+          <li><strong>I Want It All Bundle</strong> – everything in one move.</li>
+        </ul>
+
+        <hr class="sidebar-hr" />
+
+        <p style="font-size: 0.78rem; color: #9ca3af;">
+          These prices are Black Friday only. Once the window closes, everything returns to regular rates.
+        </p>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      A service of <a href="https://childactor101.com" target="_blank" rel="noopener">Child Actor 101</a>.
+      Helping parents raise confident, prepared young actors with tools, classes, and honest guidance.
+    </footer>
+  </div>
+</body>
+</html>
