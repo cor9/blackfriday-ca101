@@ -172,10 +172,10 @@
       position: absolute;
       inset: 0;
       background-image: linear-gradient(
-          135deg,
-          rgba(15, 23, 42, 0.85),
-          rgba(15, 23, 42, 0.92)
-        );
+        135deg,
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.92)
+      );
       pointer-events: none;
     }
 
@@ -189,7 +189,7 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 10px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .main-card-title {
@@ -211,6 +211,18 @@
       font-size: 0.78rem;
       color: #e5e7eb;
       opacity: 0.8;
+    }
+
+    .hero-img-wrapper {
+      margin: 10px 0 6px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .hero-img {
+      width: 100%;
+      display: block;
     }
 
     .bullet-list {
@@ -251,6 +263,7 @@
       align-items: center;
       gap: 10px;
       margin-top: 10px;
+      flex-wrap: wrap;
     }
 
     .pill {
@@ -274,10 +287,24 @@
     }
 
     .offer-card {
-      background: rgba(15, 23, 42, 0.88);
+      background: rgba(15, 23, 42, 0.96);
       border-radius: var(--radius-sm);
       border: 1px solid rgba(148, 163, 184, 0.45);
       padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .offer-img-wrapper {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .offer-img {
+      width: 100%;
+      display: block;
     }
 
     .offer-title-row {
@@ -285,7 +312,7 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 6px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .offer-title {
@@ -307,13 +334,13 @@
     .offer-body {
       font-size: 0.8rem;
       color: #e5e7eb;
-      margin-top: 6px;
+      margin-top: 2px;
     }
 
     .offer-list {
       list-style: none;
       padding-left: 0;
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .offer-list li {
@@ -328,6 +355,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 6px;
+      flex-wrap: wrap;
     }
 
     .offer-tag {
@@ -383,7 +411,7 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: var(--muted);
+      color: #9ca3af;
       margin-bottom: 4px;
     }
 
@@ -457,6 +485,16 @@
                 <div class="price-reg">Reg. $159</div>
               </div>
             </div>
+
+            <!-- HERO IMAGE (replace src with your JPG) -->
+            <div class="hero-img-wrapper">
+              <img
+                src="images/audition-boost-bundle.jpg"
+                alt="Audition Boost Bundle"
+                class="hero-img"
+              />
+            </div>
+
             <ul class="bullet-list">
               <li><span class="bullet-dot"></span><span>25-minute private audition coaching session.</span></li>
               <li><span class="bullet-dot"></span><span>10-minute live Parent Strategy Consult.</span></li>
@@ -469,7 +507,9 @@
             </p>
             <div class="card-footer-row">
               <span class="pill">Perfect for: quick wins + first-time families</span>
-              <a href="#" class="btn-primary btn-main-card">
+              <!-- STRIPE LINK: Audition Boost Bundle -->
+              <a href="#"
+                 class="btn-primary btn-main-card">
                 Grab the Bundle
               </a>
             </div>
@@ -486,6 +526,14 @@
           <div class="grid-offers">
             <!-- One Scene Special -->
             <article class="offer-card" id="onescene">
+              <div class="offer-img-wrapper">
+                <!-- STRIPE IMAGE: One Scene Special -->
+                <img
+                  src="images/one-scene-special.jpg"
+                  alt="One Scene Special Holiday Edition"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">One Scene Special — Holiday Edition</div>
                 <div class="offer-price">
@@ -505,12 +553,21 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Limited spots available</span>
-                <a href="#" class="btn-primary btn-offer">Reserve Your Spot</a>
+                <!-- STRIPE LINK: One Scene Special -->
+                <a href="#"
+                   class="btn-primary btn-offer">Reserve Your Spot</a>
               </div>
             </article>
 
             <!-- Talent Assessment + Roadmap -->
             <article class="offer-card" id="assessment">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/talent-assessment-roadmap.jpg"
+                  alt="Talent Assessment and Roadmap"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">Talent Assessment + Roadmap</div>
                 <div class="offer-price">
@@ -530,12 +587,21 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Clarity for parents</span>
-                <a href="#" class="btn-primary btn-offer">Start Assessment</a>
+                <!-- STRIPE LINK: Talent Assessment + Roadmap -->
+                <a href="#"
+                   class="btn-primary btn-offer">Start Assessment</a>
               </div>
             </article>
 
             <!-- Prep101 Packs -->
             <article class="offer-card" id="prep101">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/prep101-packs.jpg"
+                  alt="Prep101 Stocking Stuffer Packs"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">Prep101 Stocking Stuffer Packs</div>
                 <div class="offer-price">
@@ -554,12 +620,21 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Stocking stuffers for serious kids</span>
-                <a href="#" class="btn-primary btn-offer">Choose Your Pack</a>
+                <!-- STRIPE LINK: Prep101 Packs landing / selector -->
+                <a href="#"
+                   class="btn-primary btn-offer">Choose Your Pack</a>
               </div>
             </article>
 
             <!-- Parent Clarity Call -->
             <article class="offer-card" id="clarity">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/parent-clarity-call.jpg"
+                  alt="Parent Clarity Call"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">The Parent Clarity Call</div>
                 <div class="offer-price">
@@ -578,12 +653,21 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Emergency pricing</span>
-                <a href="#" class="btn-primary btn-offer">Book a Call</a>
+                <!-- STRIPE LINK: Parent Clarity Call -->
+                <a href="#"
+                   class="btn-primary btn-offer">Book a Call</a>
               </div>
             </article>
 
             <!-- I Want It All Bundle -->
             <article class="offer-card" id="all">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/i-want-it-all-bundle.jpg"
+                  alt="I Want It All Bundle"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">The “I Want It All” Bundle</div>
                 <div class="offer-price">
@@ -603,7 +687,9 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">All-in parents</span>
-                <a href="#" class="btn-primary btn-offer">Get the Bundle</a>
+                <!-- STRIPE LINK: I Want It All Bundle -->
+                <a href="#"
+                   class="btn-primary btn-offer">Get the Bundle</a>
               </div>
             </article>
           </div>
@@ -617,6 +703,13 @@
           <div class="grid-offers">
             <!-- Strategy Session -->
             <article class="offer-card" id="strategy">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/strategy-session.jpg"
+                  alt="The Strategy Session"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">The Strategy Session</div>
                 <div class="offer-price">
@@ -633,12 +726,21 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Reintroduced</span>
-                <a href="#" class="btn-primary btn-offer">Book a Session</a>
+                <!-- STRIPE LINK: Strategy Session -->
+                <a href="#"
+                   class="btn-primary btn-offer">Book a Session</a>
               </div>
             </article>
 
             <!-- Breakthrough Pack -->
             <article class="offer-card" id="breakthrough">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/breakthrough-pack.jpg"
+                  alt="The Breakthrough Pack"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">The Breakthrough Pack</div>
                 <div class="offer-price">
@@ -656,12 +758,21 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Momentum builders</span>
-                <a href="#" class="btn-primary btn-offer">Start Your Breakthrough</a>
+                <!-- STRIPE LINK: Breakthrough Pack -->
+                <a href="#"
+                   class="btn-primary btn-offer">Start Your Breakthrough</a>
               </div>
             </article>
 
             <!-- Pro Track -->
             <article class="offer-card" id="protrack">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/pro-track.jpg"
+                  alt="The Pro Track"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">The Pro Track</div>
                 <div class="offer-price">
@@ -678,12 +789,21 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Serious actors only</span>
-                <a href="#" class="btn-primary btn-offer">Join the Pro Track</a>
+                <!-- STRIPE LINK: Pro Track -->
+                <a href="#"
+                   class="btn-primary btn-offer">Join the Pro Track</a>
               </div>
             </article>
 
             <!-- Audition Advantage Plan -->
             <article class="offer-card" id="advantage">
+              <div class="offer-img-wrapper">
+                <img
+                  src="images/audition-advantage-plan.jpg"
+                  alt="Audition Advantage Plan"
+                  class="offer-img"
+                />
+              </div>
               <div class="offer-title-row">
                 <div class="offer-title">The Audition Advantage Plan</div>
                 <div class="offer-price">
@@ -701,7 +821,9 @@
               </ul>
               <div class="offer-cta-row">
                 <span class="offer-tag">Coach + reader + plan</span>
-                <a href="#" class="btn-primary btn-offer">Join the Plan</a>
+                <!-- STRIPE LINK: Audition Advantage Plan -->
+                <a href="#"
+                   class="btn-primary btn-offer">Join the Plan</a>
               </div>
             </article>
           </div>
