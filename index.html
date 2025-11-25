@@ -28,7 +28,7 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
         "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+      background: #000000;
       color: #f9fafb;
       line-height: 1.5;
       min-height: 100vh;
@@ -54,17 +54,24 @@
     .tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-size: 13px;
+      gap: 10px;
+      font-size: 15px;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(249, 115, 22, 0.1);
-      border: 1px solid rgba(249, 115, 22, 0.3);
-      color: var(--accent-soft);
+      letter-spacing: 0.15em;
+      font-weight: 800;
+      padding: 12px 24px;
+      border-radius: 8px;
+      background: #dc2626;
+      border: 2px solid #ef4444;
+      color: #ffffff;
       margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(220, 38, 38, 0.5);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
     .tag-dot {
@@ -76,23 +83,29 @@
     }
 
     h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      margin-bottom: 16px;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      line-height: 0.95;
+      color: #ffffff;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 .highlight-deal {
+      color: #f97316;
+      display: block;
+      font-size: 1.2em;
+      letter-spacing: -0.04em;
     }
 
     .subhead {
-      font-size: 1.1rem;
-      max-width: 680px;
+      font-size: 1.25rem;
+      max-width: 720px;
       margin: 0 auto;
-      color: #cbd5e1;
-      line-height: 1.6;
+      color: #ffffff;
+      line-height: 1.5;
+      font-weight: 500;
     }
 
     .highlight {
@@ -126,15 +139,19 @@
     }
 
     .btn-primary {
-      background: var(--accent);
-      color: #111827;
-      box-shadow: 0 10px 40px rgba(249, 115, 22, 0.3);
+      background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+      color: #ffffff;
+      box-shadow: 0 10px 40px rgba(220, 38, 38, 0.5);
+      border: 2px solid #fbbf24;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 50px rgba(249, 115, 22, 0.4);
-      background: #fb923c;
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 15px 50px rgba(220, 38, 38, 0.7);
+      background: linear-gradient(135deg, #b91c1c 0%, #c2410c 100%);
     }
 
     .btn-ghost {
@@ -151,10 +168,27 @@
     }
 
     .urgency {
-      font-size: 0.9rem;
-      color: #94a3b8;
-      margin-top: 16px;
-      font-style: italic;
+      font-size: 1.1rem;
+      color: #fbbf24;
+      margin-top: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .savings-banner {
+      display: inline-block;
+      background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+      color: #ffffff;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin: 24px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 30px rgba(220, 38, 38, 0.6);
+      border: 3px solid #fbbf24;
     }
 
     .layout {
@@ -461,23 +495,25 @@
     <header>
       <div class="tag">
         <span class="tag-dot"></span>
-        Black Friday • Child Actor 101
+        🔥 BLACK FRIDAY BLOWOUT 🔥
       </div>
-      <h1>Every audition is a chance.<br>Let's make sure your child is ready.</h1>
+      <h1><span class="highlight-deal">UP TO 70% OFF</span>Elite Actor Coaching<br>Your Kid Deserves</h1>
+      <div class="savings-banner">
+        ⚡ SAVE $235+ ON BUNDLES ⚡
+      </div>
       <p class="subhead">
-        Real coaching. Clear direction. Honest guidance for parents who refuse to wing it.
-        This Black Friday, get the tools and training that turn nervous kids into confident performers—at prices that won't return until next year.
+        The same professional coaching that books roles—now at prices that won't last past Monday. Stop guessing. Start winning auditions.
       </p>
       <div class="top-cta-row">
         <a href="#offers" class="btn-primary">
-          View All Deals
+          🎯 GRAB THE DEALS NOW
         </a>
         <a href="#bundles" class="btn-ghost">
-          Start with Bundles
+          See All Bundles
         </a>
       </div>
       <p class="urgency">
-        Limited-time Black Friday pricing. When the sale ends, these rates disappear until next year.
+        ⏰ SALE ENDS MONDAY • THESE PRICES NEVER RETURN
       </p>
     </header>
 
